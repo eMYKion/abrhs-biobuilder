@@ -1,18 +1,10 @@
-@font-face{
-    font-family:Roboto;
-    font-weight:400;
-    src:url(Roboto-Regular.ttf);
-}
-
+@font-face{font-family:Roboto;font-weight:400;src:url(Roboto-Regular.ttf)}
 body{
-    font-family: 'Roboto', sans-serif;
-    font-family:Roboto;
-    font-weight:400;
-    src:url(Roboto-Regular.ttf);
+    font-family:'Roboto','Arial',sans-serif;
 }
-
-
-
-#messages paper-button div{
-  
+#messages div paper-button::shadow #ripple{
+  color:#3344ee;
+}
+#messages div paper-button{
+  background-color:#dddd33;
 }
