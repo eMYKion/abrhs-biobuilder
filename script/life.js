@@ -13,6 +13,11 @@ function point(x,y){
     this.y+=vec.y;
   };
   
+  this.draw = function(){
+    ctx.fillStyle="#ffffff";
+    ctx.fillRect(this.x, this.y, 50,50);
+  }
+  
 }
 
 
