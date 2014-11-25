@@ -7,11 +7,11 @@ var model = new eColi(
 
 var time = 0;
 
-var r = new point(100,100,"#ffff00");
+var r = new point(100,100,"#ff00ff");
 fillCanvasBox.draw();
 function render(){
   
-  fillCanvasBox.draw();
+  //fillCanvasBox.draw();
   
   
   model.draw(time);
