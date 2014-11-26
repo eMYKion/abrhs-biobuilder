@@ -37,7 +37,7 @@ function line(p1, p2){
   this.p2 = new point(p2.x, p2.y, "#000000");
   
   this.distance = function(){
-    return Math.sqrt( Math.pow(this.p1.x-this.p2.x, 2), Math.pow(this.p1.y-this.p2.y, 2) );
+    return Math.sqrt( Math.pow(this.p1.x-this.p2.x, 2)+ Math.pow(this.p1.y-this.p2.y, 2) );
   }
   
 }
@@ -99,18 +99,31 @@ function eColi(fixed,major){
   this.draw = function(currTime){
     
     //currTime => radians
-    var rad = Math.cos(currTime);
     
+    var rad = Math.cos(2*Math.PI*((currTime/2))/360+Math.PI/2);
+    //console.log(Math.round(rad/Math.PI*100)/100+"pi");
     
     var fixedMid = new point(  (this.fixed[0].x+this.fixed[1].x)/2 , (this.fixed[0].y+this.fixed[1].y)/2 ,"#000000");
     
     var fixedLine = new line(this.fixed[0], this.fixed[1]);
     
-    var r = fixedLine.distance()/(2*Math.sin(rad/2));
+    var r = Math.abs(fixedLine.distance()/(2*Math.sin(rad/2)));
     
-    ctx.strokeStyle = "#00ff00";
+    //to fix "exploding radius"
+    
+    
+    
+    
     ctx.beginPath();
-    ctx.arc( fixedMid.x+Math.cos(rad/2)*r,fixedMid.y,r,Math.PI+rad,Math.PI-rad);
+    
+    ctx.arc(fixedMid.x+Math.cos(rad/2)*r, fixedMid.y, r, Math.PI+rad, Math.PI-rad, false);
+    
+    
+    currTime%10==0?console.log(r):console.log("000");
+    ctx.lineWidth = 2;
+    
+    // line color
+    ctx.strokeStyle = '#ffffff';
     ctx.stroke();
     
     this.fixed[0].draw();

@@ -7,15 +7,18 @@ var model = new eColi(
 
 var time = 0;
 
-var r = new point(100,100,"#ff00ff");
+
 fillCanvasBox.draw();
 function render(){
   
-  //fillCanvasBox.draw();
+  fillCanvasBox.draw();
   
+  ctx.font="10px Georgia";
+  ctx.fillStyle="#ff00ff";
+  ctx.fillText("<- this is the draft model for a bacteria!",80,40);
   
   model.draw(time);
-  r.draw();
+  
   time+=1;
   
   setTimeout(render, 1000/60);
