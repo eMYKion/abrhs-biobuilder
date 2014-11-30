@@ -137,7 +137,7 @@ function eColi(fixed/*,major*/){
     ctx.lineWidth = 1;
     
     // line color
-    ctx.strokeStyle = "#3d7a99";
+    ctx.strokeStyle = "#3dff99";
     ctx.stroke();
     /*
     this.fixed[0].draw();
@@ -154,13 +154,13 @@ function eColi(fixed/*,major*/){
   this.mingle = function(){
     var X = Math.random()-0.5;
     var Y = Math.random()-0.5;
-    this.fixed[0].x+=this.biasX+X;
-    this.fixed[0].y+=this.biasY+Y;
-    this.fixed[1].x+=this.biasX+X;
-    this.fixed[1].y+=this.biasY+Y;
+    this.fixed[0].x+=this.biasX/10+X/10;
+    this.fixed[0].y+=this.biasY/10+Y/10;
+    this.fixed[1].x+=this.biasX/10+X/10;
+    this.fixed[1].y+=this.biasY/10+Y/10;
     
-    this.fixed[0].x%=canvas.width;
-    this.fixed[0].y%=canvas.height;
+    this.fixed[0].x%=CanX;
+    this.fixed[0].y%=CanY;
     this.fixed[1].x=this.fixed[0].x;
     this.fixed[1].y=this.fixed[0].y+5;
     
