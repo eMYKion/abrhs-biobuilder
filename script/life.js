@@ -29,6 +29,20 @@ function point(x,y,color){
     ctx.fillStyle=this.color;
     ctx.fillRect(this.x, this.y, 1,1);
   }
+  /*
+  this.rotate = function(center, phi){
+    
+    var dist = Math.sqrt(Math.pow((this.x-center.x),2)+Math.pow((this.y-center.y),2));
+    
+    var theta = Math.atan((this.x-center.x)/(this.y-center.y));
+    
+    var x1 = Math.cos(theta + phi)*dist;
+    
+    var y1 = Math.sin(theta + phi)*dist;
+    
+    this.setpos(new vector(x1,y1));
+  }
+  */
   
 }
 
@@ -77,30 +91,30 @@ function rect(vec1, vec2, color){
 
 eColi
 
-Bacteriophage
+Bacteriophage?
 
-Robosomes
+Ribosomes?
 
-Plasmid
+Plasmid?
 
-flagella
+flagella?
 
 */
 
-function eColi(fixed,major){
+function eColi(fixed/*,major*/){
   this.fixed = [fixed[0], fixed[1]];
-  this.major = [major[0],major[1],major[2]];
+  //this.major = [major[0],major[1],major[2]];
   
-  this.dop = Math.sqrt(Math.pow((this.major[0].x-this.major[0].y),2)+Math.pow((this.major[2].x-this.major[2].y),2));
+  //this.dop = Math.sqrt(Math.pow((this.major[0].x-this.major[0].y),2)+Math.pow((this.major[2].x-this.major[2].y),2));
   
-  
+  this.offset = 100*Math.random();
   
   
   this.draw = function(currTime){
     
     //currTime => radians
     
-    var rad = Math.cos(2*Math.PI*((currTime/2))/360+Math.PI/2);
+    var rad = -1*Math.abs(Math.cos(2*Math.PI*((currTime+this.offset))/360+Math.PI/2))-0.01;
     //console.log(Math.round(rad/Math.PI*100)/100+"pi");
     
     var fixedMid = new point(  (this.fixed[0].x+this.fixed[1].x)/2 , (this.fixed[0].y+this.fixed[1].y)/2 ,"#000000");
@@ -119,19 +133,40 @@ function eColi(fixed,major){
     ctx.arc(fixedMid.x+Math.cos(rad/2)*r, fixedMid.y, r, Math.PI+rad, Math.PI-rad, false);
     
     
-    currTime%10==0?console.log(r):console.log("000");
-    ctx.lineWidth = 2;
+    //currTime%10==0?console.log(r):console.log("000");
+    ctx.lineWidth = 1;
     
     // line color
-    ctx.strokeStyle = '#ffffff';
+    ctx.strokeStyle = "#3d7a99";
     ctx.stroke();
-    
+    /*
     this.fixed[0].draw();
     this.fixed[1].draw();
     this.major[0].draw();
     this.major[1].draw();
     this.major[2].draw();
+    */
   };
+  
+  this.biasX = Math.random()-0.5;
+  this.biasY = Math.random()-0.5;
+  
+  this.mingle = function(){
+    var X = Math.random()-0.5;
+    var Y = Math.random()-0.5;
+    this.fixed[0].x+=this.biasX+X;
+    this.fixed[0].y+=this.biasY+Y;
+    this.fixed[1].x+=this.biasX+X;
+    this.fixed[1].y+=this.biasY+Y;
+    
+    this.fixed[0].x%=canvas.width;
+    this.fixed[0].y%=canvas.height;
+    this.fixed[1].x=this.fixed[0].x;
+    this.fixed[1].y=this.fixed[0].y+5;
+    
+    
+    
+  }
   
   
 }
