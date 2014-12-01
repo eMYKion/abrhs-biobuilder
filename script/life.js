@@ -114,7 +114,7 @@ function eColi(fixed/*,major*/){
     
     //currTime => radians
     
-    var rad = -1*Math.abs(Math.cos(2*Math.PI*((currTime+this.offset))/360+Math.PI/2))-0.01;
+    var rad = -1*Math.abs(Math.cos(2*Math.PI*((5*(currTime+this.offset)))/360+Math.PI/2))-0.01;
     //console.log(Math.round(rad/Math.PI*100)/100+"pi");
     
     var fixedMid = new point(  (this.fixed[0].x+this.fixed[1].x)/2 , (this.fixed[0].y+this.fixed[1].y)/2 ,"#000000");

@@ -18,8 +18,25 @@ body{
   top:0;
   left:0;
 }
+
+#header{
+  height:10%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+#header div paper-button{
+  left:30%;
+}
+
+
+
+
 #main{
-  background: radial-gradient(circle,rgba(61,122,153,0.4),rgba(61,122,153,0.4),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1));
+  background: radial-gradient(circle,rgba(61,122,153,0.4),rgba(61,122,153,0.4),rgba(0,0,0,1),rgba(0,0,0,1));
 }
 
 #main div div{
