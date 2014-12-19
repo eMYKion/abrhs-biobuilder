@@ -4,13 +4,93 @@
         <title>ABRHS BioBuilder</title>
         <script src="bower_components/platform/platform.js"></script>
         <link rel="import" href="bower_components/paper-button/paper-button.html">
-        <link rel="import" href="custom.css">
+        <link rel="stylesheet" href="custom.css">
     </head>
     <body>
-        <paper-button>
-            <div>
-                Polymer
-            </div>
-        </paper-button>
+      <div>
+        
+        
+        
+      <div id="background">
+        <canvas id="canvas"></canvas>
+      </div>
+        
+        
+      <div id="header">
+        <div flex>
+          <paper-button><b>Acton Boxborough Regional High School BioBuilder</b></paper-button>
+        </div>
+      </div>
+        
+        
+        
+      <div id="main" horizontal layout>
+        <div id="left" verticle layout flex>
+          
+          <div>
+            <a href="safety.html">
+              <paper-button>
+                Safety
+              </paper-button>
+            </a>
+          </div>
+          
+          <div>
+            <a href="labs.html">
+              <paper-button>
+                Labs
+              </paper-button>
+            </a>
+          </div>
+          
+        </div>
+        
+        
+        <div id="middle" flex>
+          <div>
+            <a href="team.html">
+              <paper-button>
+                Team
+              </paper-button>
+            </a>
+          </div>
+          
+          <div>
+            <a href="project.html">
+              <paper-button>
+                Project
+              </paper-button>
+            </a>
+          </div>
+        </div>
+        
+        
+        <div id="right" flex>
+          <div>
+            <a href="research.html">
+              <paper-button>
+                Research
+              </paper-button>
+            </a>
+          </div>
+          
+          <div>
+            <a href="outreach.html">
+              <paper-button>
+                Outreach
+              </paper-button>
+            </a>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+        
+        
+      </div>
+      <script src="script/init.js"></script>
+      <script src="script/life.js"></script>
+      <script src="script/background.js"></script>
     </body>
 </html>
