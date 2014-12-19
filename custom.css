@@ -20,6 +20,12 @@ body{
 }
 
 #header{
+  
+  color:#5555ff;
+  text-shadow: 1px 1px #000000;
+  
+  background: rgba(200,200,200,0.8);
+  
   height:10%;
   width:100%;
   position:absolute;
@@ -44,11 +50,37 @@ body{
   margin-left: 30%;
   
 }
+
 #main div div paper-button{
-  padding:50px;
+  padding:60px;
+  /*padding doesn't change anything...*/
+}
+#main div div a{ 
+  
+  color:inherit;
+  /*padding doesn't change anything...*/
+  text-decoration: none;
 }
 
 #canvas{
   width:100%;
   height:100%;
 }
+
+
+
+/*========for auxiliary sites========*/
+
+
+
+
+.auxcontainer{
+  
+  margin:60px;
+  background: rgba(200,200,200,0.8);
+  padding:30px;
+  
+}
+
+
+

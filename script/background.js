@@ -27,24 +27,6 @@ fillCanvasBox.draw();
 function render(){
   
   fillCanvasBox.draw();
-  /*
-  ctx.font="10px Georgia";
-  ctx.fillStyle="#ff00ff";
-  ctx.fillText("<- this is the draft model for a bacteria!",80,40);
-  */
-  
-  //p.draw();
-  //p.rotate(new point(110,110,"#ffffff"),Math.PI/2048);
-  
-  //microscope pointer
-  /*
-  ctx.strokeStyle="#00ffff";
-  ctx.beginPath();
-  ctx.moveTo(CanX, CanY);
-  ctx.lineTo(CanX/2, CanY/2);
-  ctx.lineWidth=10;
-  ctx.stroke();
-  */
   
   for(var i=0;i<dimen;i+=1){
     for(var j=0;j<dimen;j+=1){
