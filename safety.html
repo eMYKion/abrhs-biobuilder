@@ -1,43 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>ABRHS BioBuilder</title>
+        <title>Welcome to ABRHS Biobuilder</title>
         <script src="bower_components/platform/platform.js"></script>
         <link rel="import" href="bower_components/paper-button/paper-button.html">
         <link rel="stylesheet" href="custom.css">
-    </head>
-    <body>
-      <div>
-   
-      <div id="background">
-        <canvas id="canvas"></canvas>
-      </div>
-      
-      <div id="filler">
-        <!--to fill that awkward white space when auxcontainer gets too large-->
-      </div>
         
-      <div id="header">
-        <div flex>
-          <paper-button>Acton Boxborough Regional High School BioBuilder</paper-button>
+    </head>
+    
+    <body>
+        <div id="canvas_container">
+            <canvas id="canvas"></canvas>
         </div>
-      </div>
- 
-      <div id="main" style="color:#000000;padding:30px">
-        <div class="auxcontainer">
-          
-            <!--<h>Content</h>-->
+        <!--somehow canvas is in front...hmmm-->
+        
+        <div id="top">
+            <!--<h1 style="font-size:72px;text-align:center">ABRHS BioBuilder</h1>-->
+            <img id="Banner" src="../images/Banner.png" width="1px" height="1px">
+        </div>
+        
+        <div id="selection">
+            <table style="width:100%">
+            <tr>
+                <td><a href="index.html"><paper-button>Home</paper-button></a></td>
+                <td><a href="team.html"><paper-button>Team</paper-button></a></td>
+                <td><a href="labs.html"><paper-button>Labs</paper-button></a></td>
+                <td><a href="outreach.html"><paper-button>Outreach</paper-button></a></td>
+                <td><a href="project.html"><paper-button>Project</paper-button></a></td>
+                <td><a href="research.html"><paper-button>Reseach</paper-button></a></td>
+                <td><a href="safety.html"><paper-button>Safety</paper-button></a></td>
+               </tr>
+            </table>
+            
+            
+        </div>
+        <div id="content">
             <!--======================!!PLACE CONTENT BELOW!!======================-->
             
-          <p>Welcome to the Safety section of the website! Our BioBuilder team always practices safe labratory procedure.</p>
+            <h1>Safety</h1>
+          
+             <p>Welcome to the Safety section of the website! Our BioBuilder team always practices safe labratory procedure.</p>
           <p>We take safety very seriously. </p>
-          
-          <!--
-          <p>I think I want a job cleaning mirrors good occupation choice, I like it </p>
-          <a href="http://upload.wikimedia.org/wikipedia/commons/3/32/EscherichiaColi_NIAID.jpg">click here for FOOD!!!!</a>
-          -->
-          
-          
           
           
           
@@ -82,11 +85,8 @@
             <!--======================!!PLACE CONTENT ABOVE!!======================-->
         </div>
         
-      </div>
- 
-      </div>
-      <script src="script/init.js"></script>
-      <script src="script/life.js"></script>
-      <script src="script/background.js"></script>
+        
+        <script type="text/javascript" src="fungus.js"></script>
     </body>
+    
 </html>

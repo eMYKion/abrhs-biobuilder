@@ -1,96 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>ABRHS BioBuilder</title>
+        <title>Welcome to ABRHS Biobuilder</title>
         <script src="bower_components/platform/platform.js"></script>
         <link rel="import" href="bower_components/paper-button/paper-button.html">
         <link rel="stylesheet" href="custom.css">
+        
     </head>
+    
     <body>
-      <div>
-        
-        
-        
-      <div id="background">
-        <canvas id="canvas"></canvas>
-      </div>
-        
-        
-      <div id="header">
-        <div flex>
-          <paper-button><b>Acton Boxborough Regional High School BioBuilder</b></paper-button>
+        <div id="canvas_container">
+            <canvas id="canvas"></canvas>
         </div>
-      </div>
+        <!--somehow canvas is in front...hmmm-->
         
-        
-        
-      <div id="main" horizontal layout>
-        <div id="left" verticle layout flex>
-          
-          <div>
-            <a href="safety.html">
-              <paper-button>
-                Safety
-              </paper-button>
-            </a>
-          </div>
-          
-          <div>
-            <a href="labs.html">
-              <paper-button>
-                Labs
-              </paper-button>
-            </a>
-          </div>
-          
+        <div id="top">
+            <!--<h1 style="font-size:72px;text-align:center">ABRHS BioBuilder</h1>-->
+            <img id="Banner" src="../images/Banner.png" width="1px" height="1px">
         </div>
         
-        
-        <div id="middle" flex>
-          <div>
-            <a href="team.html">
-              <paper-button>
-                Team
-              </paper-button>
-            </a>
-          </div>
+        <div id="selection">
+            <table style="width:100%">
+            <tr>
+                <td><a href="index.html"><paper-button>Home</paper-button></a></td>
+                <td><a href="team.html"><paper-button>Team</paper-button></a></td>
+                <td><a href="labs.html"><paper-button>Labs</paper-button></a></td>
+                <td><a href="outreach.html"><paper-button>Outreach</paper-button></a></td>
+                <td><a href="project.html"><paper-button>Project</paper-button></a></td>
+                <td><a href="research.html"><paper-button>Reseach</paper-button></a></td>
+                <td><a href="safety.html"><paper-button>Safety</paper-button></a></td>
+               </tr>
+            </table>
+            
+            
+        </div>
+        <div id="content">
+            <!--======================!!PLACE CONTENT BELOW!!======================-->
+            
+            <p>Welcome to the Acton-Boxborough Regional High School BioBuilder team!</p>
+            <br>
+            <p>This year, we have decided to research the mechanism and potential application of antifungal proteins.
+            This project will give us experience in developing new biobricks from proteins in nature, a skill that is very important for any biobuilder team.
+            You can view more about our project <a href="project.html">here</a>.</p>
+            <br>
+            <p>Want to know a bit more about the team? Then check out our <a href="team.html">team page</a></p>
           
-          <div>
-            <a href="project.html">
-              <paper-button>
-                Project
-              </paper-button>
-            </a>
-          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <!--======================!!PLACE CONTENT ABOVE!!======================-->
         </div>
         
         
-        <div id="right" flex>
-          <div>
-            <a href="research.html">
-              <paper-button>
-                Research
-              </paper-button>
-            </a>
-          </div>
-          
-          <div>
-            <a href="outreach.html">
-              <paper-button>
-                Outreach
-              </paper-button>
-            </a>
-          </div>
-        </div>
-        
-        
-      </div>
-      
-        
-        
-      </div>
-      <script src="script/init.js"></script>
-      <script src="script/life.js"></script>
-      <script src="script/background.js"></script>
+        <script type="text/javascript" src="fungus.js"></script>
     </body>
+    
 </html>
