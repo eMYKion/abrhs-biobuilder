@@ -30,21 +30,17 @@ paper-button {
 
 #content{
     background-color:rgba(100,100,200,0.1);
-    margin:auto;
     padding:50px;
-}
-
-#selection{
+    margin:auto;
     
 }
-
 #top{
     /*
     position:absolute;
     top:5%;
     */
     background-color:rgba(100,100,200,0.1);
-    margin:auto;
+    padding:50px;
 }
 
 #canvas_container{
@@ -57,5 +53,5 @@ paper-button {
 
 #canvas {
     width:100%;
-    z-index:-1000000;
+    z-index:1;
 }
