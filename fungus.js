@@ -18,7 +18,7 @@ ctx.stroke();
 */
 function render(){
     resize();
-    setInterval(render, 1000/60);
+    
     
 }
-render();
+setInterval(render, 1000/60);
