@@ -4,6 +4,15 @@ function resize(){
     var BannerWidth = document.getElementById("top").clientWidth;
     Banner.width = BannerWidth-100;
     Banner.height = BannerWidth/1277*274;
+    
+    
+    
+    var bread = document.getElementById("bread");
+    
+    bread.width = bread.clientWidth/5;
+    bread.height = bread.clientHeight/5;
+    
+    
 }
 
 //and now the fun begins!
@@ -21,5 +30,11 @@ function render(){
     resize();
     
     
+    
+    
+    
 }
 setInterval(render, 1000/60);
+
+
+
