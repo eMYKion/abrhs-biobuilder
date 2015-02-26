@@ -9,8 +9,8 @@ function resize(){
     
     var bread = document.getElementById("bread");
     
-    bread.width = bread.clientWidth/5;
-    bread.height = bread.clientHeight/5;
+    bread.width = bread.width/5;
+    bread.height = bread.height/5;
     
     
 }
