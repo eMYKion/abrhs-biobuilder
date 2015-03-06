@@ -5,6 +5,26 @@
         <script src="bower_components/platform/platform.js"></script>
         <link rel="import" href="bower_components/paper-button/paper-button.html">
         <link rel="stylesheet" href="custom.css">
+        <style type="text/css">
+            /*-------------------------------for individual sites---------------------------*/
+
+            #bread2{
+                text-align:center;
+                /*570, 770*/
+                height:114px;
+                width:154px;
+                
+            }
+
+            
+            #bread2 img{
+                width:100%;
+                height:100%;
+            }
+            
+
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         
     </head>
     
@@ -42,21 +62,29 @@
             <h1>Outreach</h1>
           
           
-            <h>Science Family Night</h>
-            <p>Science family night is a local event where high schoolers share their knowlede of STEM with students in elementary school.
-            We set up a fun table that showcased our iGEM project poster from last year along with vita yeast, a GMO that makes vitamin A.
-            The vita yeast was displayed in petri dishes and we had a loaf of bread made with the yeast on a plate.
-            Families walked up to our stall to hear what biobuilder was all about and we explained the process of modifying the DNA of living organisms.
-            At the end of the presentation, we asked the families whether or not they would eat the bread made with the genetically modified yeast.
-            Much to our suprise, the vote was almost even, with the "no" side winning by one vote.
+            <h> <b>Science Family Night</b></h>
+            <div id="bread2">
+                <img src="images/bread.jpg">
+            </div>
+            <p>
+                Science Family Night is a local event at Acton-Boxborough Regional High School. High school clubs and organizations meet each year to hold events promoting sciences and technology. Members of the clubs conduct science experiments and build devices to carry out specific purposes. Children of all ages and their families come to this event to learn and appreciate science and technology.
+            
+            <br>This year, our Biobuilder team participated in Science Family Night. We taught the kids the true meaning behind the phrase genetically modified organisms and the process of modifying the DNA of living organisms. To do this efficiently, we created a physical example: genetically modified beta-keratin (aka vitamin b) rich yeast or vita yeast. We, then, took our homemade GMO and baked it into bread. After our lesson on GMOs, we then asked the kids whether or not they would feel comfortable eating the bread. Much to our surprise, the vote was almost even, with the "no" side winning by one vote. When we asked why, many students said that they didn't like the idea of eating food that has been genetically engineered. These responses made us determined to destroy misconceptions regarding synthetic biology.</br>
+            
+            <br>We also explained our project from last year, which involved recreating Kopi Luwak coffee beans usually inhumanly made in the stomach of the civet cat. We attempted to create E. coli that could mimic the environment of a civet cat's stomach. By creating bacteria that can do that, we could make Kopi Luwak coffee beans without the need of civet cats. This method would humane still make the very same beans. It also turns out that enzymes of a civet cat's stomach can denature the proteins in coffee beans so that it will be less bitter and taste better overall than the original beans. We wanted to make a more humane way of producing Kopi Luwak coffee which the most expensive coffee in the world. You can learn more about our project and our process last year <a href = "http://2014hs.igem.org/Team:Acton-BoxboroughRHS ">here. </a></br>
             </p>
+            
+            <img src="images/bread.jpg" id="bread" width="450px" height="300px">
+            
+            <img src=””></img>
+
             
             <a href="https://www.facebook.com/media/set/?set=a.790201447688393.1073741871.166478093394068&type=1">Here is a gallery on facebook</a>
               <br>
               <br>
               <br>
-            <img src="images/bread.jpg" id="bread" width="945px" height="709px">
-          
+            
+            <img src=""
           
           
           
@@ -98,7 +126,23 @@
         </div>
         
         
-        <script type="text/javascript" src="fungus.js"></script>
+        <script>
+            //house keeping stuff
+            console.log("WORKS!!")
+            function resize(){
+                $("#Banner").width($("#top").width()-100);
+                $("#Banner").height($("#top").width()/1277*274);
+            
+            }
+            function render(){
+                resize();
+            }
+            setInterval(render, 1000/60);
+
+
+
+
+        </script>
     </body>
     
 </html>

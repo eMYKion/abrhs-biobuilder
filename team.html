@@ -89,7 +89,23 @@
         </div>
         
         
-        <script type="text/javascript" src="fungus.js"></script>
+        <script>
+            //house keeping stuff
+            console.log("WORKS!!")
+            function resize(){
+                $("#Banner").width($("#top").width()-100);
+                $("#Banner").height($("#top").width()/1277*274);
+            
+            }
+            function render(){
+                resize();
+            }
+            setInterval(render, 1000/60);
+
+
+
+
+        </script>
     </body>
     
 </html>

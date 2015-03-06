@@ -45,9 +45,14 @@
             <h3>Anti-Fungal Proteins</h3>
             
          
-            <p>Our BioBuilder project focuses on antifungal proteins. Plants have developed a staggering 
-            variety of methods to destroy fungus while keeping symbiotic bacteria intact.  
-            we can combine these proteins to create a truly formidable defense against 
+            <p>Previously an iGEM team, Acton Boxborough Regional High school has joined BioBuilder!
+            Our iGEM idea last year was ambitious and imaginitive but too difficult for us to complete.
+            This year, we aim to pursue a more pragmatic goal so we can design a complete plasmid that is very useful and functional.
+            In pursuit of this goal, our BioBuilder team has voted to focus on antifungal proteins. Plants have developed a staggering 
+            variety of methods to destroy fungus while keeping symbiotic bacteria intactm so we should be able to make our own plasmid.  
+            When we have found the gene for an antifungal protein, we will design a plasmid around it that can be cloned
+            into E. coli to create a truly formidable defense against pathogenic fungus. The protein from our transgenic E. coli can be used
+            to defend plants that do not produce enough of it to protect themselves from infection.
             all forms of fungi. </p>
             <p>In other words, we can use take advantage of an eternity of evolution to make a 
             ridiculously overpowered chimera that makes evil fungi go extinct.</p>
@@ -95,7 +100,23 @@
         </div>
         
         
-        <script type="text/javascript" src="fungus.js"></script>
+        <script>
+            //house keeping stuff
+            console.log("WORKS!!")
+            function resize(){
+                $("#Banner").width($("#top").width()-100);
+                $("#Banner").height($("#top").width()/1277*274);
+            
+            }
+            function render(){
+                resize();
+            }
+            setInterval(render, 1000/60);
+
+
+
+
+        </script>
     </body>
     
 </html>
