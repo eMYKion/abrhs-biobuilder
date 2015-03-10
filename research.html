@@ -5,6 +5,7 @@
         <script src="bower_components/platform/platform.js"></script>
         <link rel="import" href="bower_components/paper-button/paper-button.html">
         <link rel="stylesheet" href="custom.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         
     </head>
     
@@ -61,14 +62,28 @@
             In it, we restricted ourselves to protiens that met two characteristics:</p>
             <ol>
                 <li>Less than 500 amino acids in length. We wished our plasmid to be around 5000 total base pairs, as we have had success transforming
-                that particular strain of E. coli with plasmids of that length. We had initially looked for protiens with less than 50 base pairs so that they could diffuse out of the E. coli without a seperate release mechanism. 
+                that particular strain of E. coli with plasmids of that length. We had initially looked for proteins with less than 50 base pairs so that they could diffuse out of the E. coli without a seperate release mechanism. 
                 As we had had little success, we decided to go with a longer sequence and lyse the cells to release the protien, if necessary.</li>
                 <li>Bacterial in origin. We did not want a protein that would kill our E. coli chassis, so we selected a bacterial one to make sure that
                 it was not deadly to bacteria</li>
             </ol>
-            <p>We came up with one protein that fulfilled all of our requerments: Chitinase D, a 488 base pair protien from Bacillus circulans that attacked N-acetyl-beta-D-glucosaminide (1->4)-beta-linkages in chitin. It had a gene sequence, too. (<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC205731/pdf/jbacter00068-0076.pdf"> Watanabe et al</a>)</p>
-            <p>Due to its reliability, we decided to go with 'insert plasmid here' for our plasmid. </p>
-          
+            <p>We came up with one protein that fulfilled all of our requirements: Chitinase D, a 488 base pair protien from Bacillus circulans that attacked N-acetyl-beta-D-glucosaminide (1->4)-beta-linkages in chitin. It had a gene sequence, too. (<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC205731/pdf/jbacter00068-0076.pdf"> Watanabe et al</a>)</p>
+            <br>
+            <p>For our plasmid, we wanted three things:</p>
+            <ol>
+                <li>A pre-synthesized and well-documented part, to avoid wasting time and money synthesizing it ourselves.</li>
+                <li>High copy number, as these produce more protien. We looked at medium-low and low copy plasmids too, however the benefit they offered,
+                reduced use of cellular resourced leading to a more consistent performace, would be less of a concern to us, as we are not running multiple 
+                plasmids in parallel, and production inconsistencies would not be a problem.</li>
+                <li>We preferred to have ampicillin resistance, as this is a very standard resistance that we have had experience in using.</li>
+            </ol>
+            <br>
+            <p>Looking through the possible plasmids on parts.igem.org, we came up with two candidates:</p>
+            <ol>
+                <li>pSB1C3, a 2070 bp plasmid which came with a high-copy origin of replication, chloroamphenicol resistance, promoter, terminator. This is the iGEM registry standard plasmid.</li>
+                <li>pSB1A3, a 2155 bp plasmid that was very similar to the first one, except that it had ampicillin resistance. There were also teams that had reported it to work. 
+                It has several problems, such as having nonfunctional EcoR1 and Pst1 sites and being difficult to turn off, but as our project only requires expression of one protien, these issues did not seem important.</li>
+            </ol>
           
           
           

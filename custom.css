@@ -12,7 +12,8 @@ body{
 
 #selection table tr td{
     padding:0px;
-    background-color:rgba(100,100,200,0.1);
+    background-color:rgba(100,100,200,0.3);
+    border:1px solid #005e01;
     text-align:center;
     padding-left:0px;
     padding-left:0px;
@@ -33,7 +34,8 @@ paper-button {
 }
 
 #content{
-    background-color:rgba(100,100,200,0.1);
+    background-color:rgba(100,100,200,0.3);
+    border:1px solid #005e01;
     padding:50px;
     margin:auto;
     
@@ -43,7 +45,9 @@ paper-button {
     position:absolute;
     top:5%;
     */
-    background-color:rgba(100,100,200,0.1);
+    background-color:rgba(100,100,200,0.3);
+    border:1px solid #005e01;
+    text-align:center;
     padding:50px;
 }
 
